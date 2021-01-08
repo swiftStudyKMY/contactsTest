@@ -13,8 +13,6 @@ import ContactsUI
 
 class tableVC:UIViewController{
     
-    @IBOutlet weak var sBar: UISearchBar!
-    
     var list : [String] = ["abc", "bca","cab"]
     
 //    var contacts = [tableCellVC]()
@@ -28,13 +26,17 @@ class tableVC:UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sBar.delegate = self
+        self.navigationItem.title = "연락처"
         
-        tv.delegate=self
-        tv.dataSource=self
+        self.configure()
         
         self.fetchContacts()
         
+    }
+    
+    private func configure(){
+        tv.delegate=self
+        tv.dataSource=self
     }
     
     private func fetchContacts(){

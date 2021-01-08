@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Ld-Md-i9B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AYx-3M-ZWl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,13 +16,13 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="139"/>
+            <point key="canvasLocation" x="1841" y="-548"/>
         </scene>
         <!--TableVC-->
         <scene sceneID="mcd-KW-sqp">
@@ -30,13 +32,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="pXQ-zf-Ale">
-                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dbT-UG-i0E">
-                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCellVC" rowHeight="132" id="cCn-3I-0uq" customClass="tableCellVC" customModule="contactsTest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="132"/>
@@ -87,27 +85,46 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="w5A-4c-Ezx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pXQ-zf-Ale" firstAttribute="leading" secondItem="w5A-4c-Ezx" secondAttribute="leading" id="5dY-ab-X7X"/>
-                            <constraint firstItem="pXQ-zf-Ale" firstAttribute="top" secondItem="w5A-4c-Ezx" secondAttribute="top" id="ERx-cO-KaR"/>
-                            <constraint firstItem="dbT-UG-i0E" firstAttribute="top" secondItem="pXQ-zf-Ale" secondAttribute="bottom" id="Kdt-Ik-gQN"/>
+                            <constraint firstItem="dbT-UG-i0E" firstAttribute="top" secondItem="w5A-4c-Ezx" secondAttribute="top" id="Jcq-jc-aB4"/>
                             <constraint firstItem="dbT-UG-i0E" firstAttribute="trailing" secondItem="w5A-4c-Ezx" secondAttribute="trailing" id="Kyx-ag-yDq"/>
                             <constraint firstItem="dbT-UG-i0E" firstAttribute="bottom" secondItem="w5A-4c-Ezx" secondAttribute="bottom" id="MeB-ir-jRP"/>
                             <constraint firstItem="dbT-UG-i0E" firstAttribute="leading" secondItem="w5A-4c-Ezx" secondAttribute="leading" id="TAz-Ec-iLL"/>
-                            <constraint firstItem="dbT-UG-i0E" firstAttribute="top" secondItem="pXQ-zf-Ale" secondAttribute="bottom" id="TDt-lq-7mh"/>
-                            <constraint firstItem="pXQ-zf-Ale" firstAttribute="trailing" secondItem="w5A-4c-Ezx" secondAttribute="trailing" id="VTg-4W-i60"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="w5A-4c-Ezx"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Odk-cS-AzP"/>
                     <connections>
-                        <outlet property="sBar" destination="pXQ-zf-Ale" id="eV2-cW-38b"/>
                         <outlet property="tv" destination="dbT-UG-i0E" id="CkA-js-GWn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4BS-Qw-km3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1466.6666666666667" y="138.61607142857142"/>
+            <point key="canvasLocation" x="2750.7246376811595" y="164.73214285714286"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fmG-g0-Jk2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AYx-3M-ZWl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Au4-pq-ixv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8Ld-Md-i9B" kind="relationship" relationship="rootViewController" id="b8j-ND-c8u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pbi-LV-aNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840.5797101449277" y="164.73214285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
